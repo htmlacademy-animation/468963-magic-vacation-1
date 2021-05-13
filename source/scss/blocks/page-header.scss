@@ -241,6 +241,12 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
+    transform: scaleX(-1);
+
+    span {
+      display: block;
+      transform: scaleX(-1);
+    }
 
     &::after {
       content: "";
@@ -250,8 +256,6 @@
       height: 2px;
       background-color: $c-light;
       left: 0;
-      //transform-origin: top right;
-      transform: scaleX(-1);
       transition: width 0.5s ease;
 
       @media (max-width: $tablet) and (orientation: portrait) {
@@ -270,6 +274,7 @@
     &.active {
       &::after {
         width: 100%;
+        transform: scaleX(1);
       }
     }
 
@@ -277,6 +282,12 @@
     &:focus {
       color: $c-purple;
       outline: none;
+      transform: scaleX(1);
+
+      span{
+        display: block;
+        transform: scaleX(1);
+      }
 
       &::after {
         opacity: 1;

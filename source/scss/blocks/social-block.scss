@@ -89,7 +89,6 @@
   margin-top: 1.5rem;
   opacity: 0;
   pointer-events: none;
-  transition: opacity ease 0.5s;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
@@ -131,16 +130,19 @@
   &:hover {
     opacity: 1;
     pointer-events: auto;
+    transition: opacity ease 0.5s;
   }
 
   &:focus-within {
     opacity: 1;
     pointer-events: auto;
+    transition: opacity ease 0.5s;
   }
 
   .social-block--active & {
     opacity: 1;
     pointer-events: auto;
+    transition: opacity ease 0.5s;
   }
 
   li {
@@ -257,4 +259,8 @@
 
 .display-none {
   opacity: 0;
+}
+
+.transition-delay {
+  transition-delay: 0ms;
 }
