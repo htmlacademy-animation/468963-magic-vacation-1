@@ -1,4 +1,5 @@
 export default () => {
-  // eslint-disable-next-line no-console
-  console.log(`ready`);
+  setTimeout(()=>{
+    document.querySelector(`.intro__message`).classList.add(`active`);
+  }, 500);
 };

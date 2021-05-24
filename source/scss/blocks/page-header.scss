@@ -272,8 +272,13 @@
     }
 
     &.active {
+      transform: scaleX(1);
       &::after {
         width: 100%;
+        transform: scaleX(1);
+      }
+      span {
+        display: block;
         transform: scaleX(1);
       }
     }
