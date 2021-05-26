@@ -96,6 +96,14 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  opacity: 0;
+  transform: translateX(50px);
+  transition-duration: 1s;
+
+  &.active_story {
+    transform: translateX(0);
+    opacity: 1;
+  }
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;

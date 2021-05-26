@@ -3,6 +3,18 @@ export default () => {
   let messageField = document.getElementById(`message-field`);
   let messageList = document.getElementById(`messages`);
   let chatBlock = document.querySelector(`.js-chat`);
+  const linkGame = document.querySelector(`#linkGame`);
+
+  // eslint-disable-next-line no-console
+  console.log(`linkGame.classList.contains`, linkGame.classList.contains(`active`));
+
+  if (linkGame.classList.contains(`active`)) {
+    setTimeout(()=>{
+      messageField.classList.add(`active`);
+    }, 500);
+  } else {
+    messageField.classList.remove(`active`);
+  }
 
   messageForm.addEventListener(`submit`, function (e) {
     e.preventDefault();

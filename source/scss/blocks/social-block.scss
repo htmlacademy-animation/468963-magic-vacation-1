@@ -130,16 +130,19 @@
   &:hover {
     opacity: 1;
     pointer-events: auto;
+    transition: opacity ease 0.5s;
   }
 
   &:focus-within {
     opacity: 1;
     pointer-events: auto;
+    transition: opacity ease 0.5s;
   }
 
   .social-block--active & {
     opacity: 1;
     pointer-events: auto;
+    transition: opacity ease 0.5s;
   }
 
   li {
@@ -168,6 +171,9 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition: 500ms ease;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -216,6 +222,7 @@
         height: 17px;
       }
     }
+    transition-delay: 500ms;
   }
 
   &--insta {
@@ -228,6 +235,7 @@
         height: 15px;
       }
     }
+    transition-delay: 1s;
   }
 
   &--vk {
@@ -241,4 +249,18 @@
       }
     }
   }
+  transition-delay: 1.5s;
+}
+
+.active-link {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.display-none {
+  opacity: 0;
+}
+
+.transition-delay {
+  transition-delay: 0ms;
 }
