@@ -2,6 +2,7 @@ export default () => {
   setTimeout(()=>{
     document.querySelector(`.intro__message`).classList.add(`active`);
   }, 1000);
+
   window.addEventListener(`load`, ()=>{
     const menu = document.querySelector(`#menu`);
     const footer = document.querySelector(`.screen__footer`);
