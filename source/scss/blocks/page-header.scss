@@ -35,12 +35,12 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 1s cubic-bezier(0.56, 0.91, 0.29, 0.94);
-  &_not-active {
-    opacity: 0;
-    transform: translateX(-7rem);
+  opacity: 0;
+  transform: translateX(-3rem);
+  &_active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s cubic-bezier(0.56, 0.91, 0.29, 0.94);
   }
 
   @media (min-width: $stop-scaling) {
@@ -184,10 +184,10 @@
   font-size: 1.2rem;
   line-height: 1.0418;
   color: $c-light;
-  opacity: 1;
-  transition: opacity 1s cubic-bezier(0.56, 0.91, 0.29, 0.94);
-  &_not-active {
-    opacity: 0;
+  opacity: 0;
+  &_active {
+    opacity: 1;
+    transition: opacity 1s cubic-bezier(0.56, 0.91, 0.29, 0.94);
   }
 
   @media (min-width: $stop-scaling) {
@@ -317,11 +317,6 @@
 
 .page-header__social {
   margin-left: 4.8rem;
-  transform: scale(1);
-  transition: transform 500ms cubic-bezier(0.56, 0.91, 0.29, 0.94);
-  &_not-active {
-    transform: scale(0);
-  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 48px;
