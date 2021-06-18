@@ -5,9 +5,6 @@ export default () => {
   let chatBlock = document.querySelector(`.js-chat`);
   const linkGame = document.querySelector(`#linkGame`);
 
-  // eslint-disable-next-line no-console
-  console.log(`linkGame.classList.contains`, linkGame.classList.contains(`active`));
-
   if (linkGame.classList.contains(`active`)) {
     setTimeout(()=>{
       messageField.classList.add(`active`);
